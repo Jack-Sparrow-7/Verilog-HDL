@@ -1,0 +1,49 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5bcaaed1d5b0 .scope module, "multiplier_tb" "multiplier_tb" 2 1;
+ .timescale 0 0;
+v0x5bcaaed2eff0_0 .var "a", 7 0;
+v0x5bcaaed2f0b0_0 .var "b", 7 0;
+v0x5bcaaed2f180_0 .net "y", 15 0, L_0x5bcaaed2f530;  1 drivers
+S_0x5bcaaed1d740 .scope module, "dut" "multiplier" 2 7, 3 1 0, S_0x5bcaaed1d5b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 8 "a";
+    .port_info 1 /INPUT 8 "b";
+    .port_info 2 /OUTPUT 16 "y";
+v0x5bcaaece4100_0 .net *"_ivl_0", 15 0, L_0x5bcaaed2f280;  1 drivers
+L_0x740429757018 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x5bcaaed2ea00_0 .net *"_ivl_3", 7 0, L_0x740429757018;  1 drivers
+v0x5bcaaed2eae0_0 .net *"_ivl_4", 15 0, L_0x5bcaaed2f3f0;  1 drivers
+L_0x740429757060 .functor BUFT 1, C4<00000000>, C4<0>, C4<0>, C4<0>;
+v0x5bcaaed2eba0_0 .net *"_ivl_7", 7 0, L_0x740429757060;  1 drivers
+v0x5bcaaed2ec80_0 .net "a", 7 0, v0x5bcaaed2eff0_0;  1 drivers
+v0x5bcaaed2edb0_0 .net "b", 7 0, v0x5bcaaed2f0b0_0;  1 drivers
+v0x5bcaaed2ee90_0 .net "y", 15 0, L_0x5bcaaed2f530;  alias, 1 drivers
+L_0x5bcaaed2f280 .concat [ 8 8 0 0], v0x5bcaaed2eff0_0, L_0x740429757018;
+L_0x5bcaaed2f3f0 .concat [ 8 8 0 0], v0x5bcaaed2f0b0_0, L_0x740429757060;
+L_0x5bcaaed2f530 .arith/mult 16, L_0x5bcaaed2f280, L_0x5bcaaed2f3f0;
+    .scope S_0x5bcaaed1d5b0;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "multiplier_wave.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5bcaaed1d5b0 {0 0 0};
+    %pushi/vec4 64, 0, 8;
+    %store/vec4 v0x5bcaaed2eff0_0, 0, 8;
+    %pushi/vec4 64, 0, 8;
+    %store/vec4 v0x5bcaaed2f0b0_0, 0, 8;
+    %delay 10, 0;
+    %vpi_call 2 17 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "multiplier_tb.v";
+    "multiplier.v";
