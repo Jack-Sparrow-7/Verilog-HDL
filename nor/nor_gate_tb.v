@@ -8,6 +8,8 @@ module nor_gate_tb;
         $dumpfile("nor_gate_wave.vcd");
         $dumpvars(0,nor_gate_tb);
 
+        $monitor("a = %b b = %b y = %b",x,w,z);
+
         x = 0; w = 0; #10;
         x = 0; w = 1; #10;
         x = 1; w = 0; #10;
@@ -16,3 +18,5 @@ module nor_gate_tb;
         $finish;
     end
 endmodule
+
+

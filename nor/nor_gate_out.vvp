@@ -7,47 +7,52 @@
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
 :vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
-S_0x62a853931560 .scope module, "nor_gate_tb" "nor_gate_tb" 2 1;
+S_0x64d727fb25a0 .scope module, "nor_gate_tb" "nor_gate_tb" 2 1;
  .timescale 0 0;
-v0x62a853942920_0 .var "w", 0 0;
-v0x62a8539429f0_0 .var "x", 0 0;
-v0x62a853942ac0_0 .net "z", 0 0, L_0x62a853942bc0;  1 drivers
-S_0x62a8539316f0 .scope module, "uut" "nor_gate" 2 5, 3 1 0, S_0x62a853931560;
+v0x64d727fc4640_0 .var "w", 0 0;
+v0x64d727fc4710_0 .var "x", 0 0;
+v0x64d727fc47e0_0 .net "z", 0 0, L_0x64d727fc48e0;  1 drivers
+S_0x64d727fb2730 .scope module, "uut" "nor_gate" 2 5, 3 1 0, S_0x64d727fb25a0;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "y";
-L_0x62a853942bc0 .functor NOR 1, v0x62a8539429f0_0, v0x62a853942920_0, C4<0>, C4<0>;
-v0x62a853931920_0 .net "a", 0 0, v0x62a8539429f0_0;  1 drivers
-v0x62a853942710_0 .net "b", 0 0, v0x62a853942920_0;  1 drivers
-v0x62a8539427d0_0 .net "y", 0 0, L_0x62a853942bc0;  alias, 1 drivers
-    .scope S_0x62a853931560;
+L_0x64d727fc48e0 .functor NOR 1, v0x64d727fc4710_0, v0x64d727fc4640_0, C4<0>, C4<0>;
+v0x64d727fb2960_0 .net "a", 0 0, v0x64d727fc4710_0;  1 drivers
+v0x64d727fc4430_0 .net "b", 0 0, v0x64d727fc4640_0;  1 drivers
+v0x64d727fc44f0_0 .net "y", 0 0, L_0x64d727fc48e0;  alias, 1 drivers
+    .scope S_0x64d727fb25a0;
 T_0 ;
     %vpi_call 2 8 "$dumpfile", "nor_gate_wave.vcd" {0 0 0};
-    %vpi_call 2 9 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x62a853931560 {0 0 0};
+    %vpi_call 2 9 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x64d727fb25a0 {0 0 0};
+    %vpi_call 2 11 "$monitor", "a = %b b = %b y = %b", v0x64d727fc4710_0, v0x64d727fc4640_0, v0x64d727fc47e0_0 {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x62a8539429f0_0, 0, 1;
+    %store/vec4 v0x64d727fc4710_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x62a853942920_0, 0, 1;
+    %store/vec4 v0x64d727fc4640_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x62a8539429f0_0, 0, 1;
+    %store/vec4 v0x64d727fc4710_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x62a853942920_0, 0, 1;
+    %store/vec4 v0x64d727fc4640_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x62a8539429f0_0, 0, 1;
+    %store/vec4 v0x64d727fc4710_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v0x62a853942920_0, 0, 1;
+    %store/vec4 v0x64d727fc4640_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x62a8539429f0_0, 0, 1;
+    %store/vec4 v0x64d727fc4710_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v0x62a853942920_0, 0, 1;
+    %store/vec4 v0x64d727fc4640_0, 0, 1;
     %delay 10, 0;
-    %vpi_call 2 16 "$finish" {0 0 0};
+    %vpi_call 2 18 "$finish" {0 0 0};
     %end;
     .thread T_0;
+    .scope S_0x64d727fb25a0;
+T_1 ;
+    %end;
+    .thread T_1;
 # The file index is used to find the file name in the following table.
 :file_names 4;
     "N/A";
