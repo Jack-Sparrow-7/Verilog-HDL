@@ -7,8 +7,6 @@ module adder_tb;
 
     adder dut(.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
 
-    integer i,j;
-
     initial begin
         
         $dumpfile("adder_wave.vcd");
