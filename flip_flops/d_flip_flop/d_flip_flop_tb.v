@@ -1,9 +1,9 @@
 module d_flip_flop_tb;
 
     reg d,clk;
-    wire q;
+    wire q,qbar;
 
-    d_flip_flop dut(.d(d),.clk(clk),.q(q));
+    d_flip_flop dut(.d(d),.clk(clk),.q(q),.qbar(qbar));
 
     initial begin
         clk = 0;
