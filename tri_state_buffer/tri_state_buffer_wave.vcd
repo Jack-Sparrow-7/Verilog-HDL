@@ -1,0 +1,40 @@
+$date
+	Sat Jan 24 19:50:14 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tri_state_buffer_tb $end
+$var wire 1 ! out $end
+$var reg 1 " enable $end
+$var reg 1 # in $end
+$scope module uut $end
+$var wire 1 " enable $end
+$var wire 1 # in $end
+$var wire 1 ! out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0#
+0"
+z!
+$end
+#5
+0!
+1"
+#10
+z!
+0"
+1#
+#15
+1!
+1"
+#20
