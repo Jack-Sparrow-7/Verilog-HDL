@@ -1,0 +1,21 @@
+module up_down_counter (
+    clk,
+    reset,
+    up_down,
+    count
+);
+    input clk, reset, up_down;
+    output reg [0:3] count;
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            count <= 4'b0000;
+        end else begin
+            if (up_down) begin
+                count <= count + 1;
+            end else begin
+                count <= count - 1;
+            end
+        end
+    end
+endmodule
