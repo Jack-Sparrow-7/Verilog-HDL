@@ -1,7 +1,7 @@
 module counter_tb;
 
     reg clk, enable, reset;
-    wire [0:7] count;
+    wire [7:0] count;
 
     counter uut (
         .clk(clk),

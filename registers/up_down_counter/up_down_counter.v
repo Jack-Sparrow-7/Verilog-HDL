@@ -5,7 +5,7 @@ module up_down_counter (
     count
 );
     input clk, reset, up_down;
-    output reg [0:3] count;
+    output reg [3:0] count;
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin

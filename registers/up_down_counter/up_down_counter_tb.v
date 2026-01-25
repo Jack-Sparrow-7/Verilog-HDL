@@ -1,6 +1,6 @@
 module up_down_counter_tb;
     reg clk, reset, up_down;
-    wire [0:3] count;
+    wire [3:0] count;
 
     up_down_counter uut (
         clk,

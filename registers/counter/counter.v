@@ -6,7 +6,7 @@ module counter (
 );
 
     input clk, reset, enable;
-    output reg [0:7] count;
+    output reg [7:0] count;
 
     always @(posedge clk or posedge reset) begin
         if (reset) begin
