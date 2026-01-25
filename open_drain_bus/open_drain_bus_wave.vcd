@@ -1,0 +1,60 @@
+$date
+	Sun Jan 25 22:53:23 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module OpenDrain_Bus_Tb $end
+$var wire 1 ! bus_signal $end
+$var reg 1 " data_in1 $end
+$var reg 1 # data_in2 $end
+$var reg 1 $ enable1 $end
+$var reg 1 % enable2 $end
+$scope module driver1 $end
+$var wire 1 ! bus_wire $end
+$var wire 1 " data_in $end
+$var wire 1 $ enable $end
+$upscope $end
+$scope module driver2 $end
+$var wire 1 ! bus_wire $end
+$var wire 1 # data_in $end
+$var wire 1 % enable $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+1!
+$end
+#20
+0!
+1$
+#40
+1!
+1"
+#60
+0!
+1%
+0$
+#80
+0"
+1$
+#100
+1#
+#120
+1"
+0#
+#140
+1!
+1#
+#160

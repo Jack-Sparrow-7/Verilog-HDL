@@ -1,0 +1,116 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x649f77cc8d90 .scope module, "OpenDrain_Bus_Tb" "OpenDrain_Bus_Tb" 2 1;
+ .timescale 0 0;
+L_0x649f77cf2960 .functor BUFT 1, C8<551>, C4<0>, C4<0>, C4<0>;
+RS_0x7125900660d8 .resolv tri, L_0x649f77cf2960, L_0x649f77cf2c00, L_0x649f77cf2ef0;
+v0x649f77cf2550_0 .net8 "bus_signal", 0 0, RS_0x7125900660d8;  3 drivers, strength-aware
+v0x649f77cf2640_0 .var "data_in1", 0 0;
+v0x649f77cf2700_0 .var "data_in2", 0 0;
+v0x649f77cf27a0_0 .var "enable1", 0 0;
+v0x649f77cf2870_0 .var "enable2", 0 0;
+S_0x649f77cc9ba0 .scope module, "driver1" "OpenDrain_Driver1" 2 7, 3 1 0, S_0x649f77cc8d90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "enable";
+    .port_info 1 /INPUT 1 "data_in";
+    .port_info 2 /OUTPUT 1 "bus_wire";
+L_0x649f77cf2af0 .functor AND 1, v0x649f77cf27a0_0, L_0x649f77cf29d0, C4<1>, C4<1>;
+v0x649f77cc2430_0 .net *"_ivl_1", 0 0, L_0x649f77cf29d0;  1 drivers
+v0x649f77cf17a0_0 .net *"_ivl_3", 0 0, L_0x649f77cf2af0;  1 drivers
+L_0x71258fdb7018 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x649f77cf1860_0 .net/2u *"_ivl_4", 0 0, L_0x71258fdb7018;  1 drivers
+o0x7125900660a8 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0x649f77cf1920_0 name=_ivl_6
+v0x649f77cf1a00_0 .net8 "bus_wire", 0 0, RS_0x7125900660d8;  alias, 3 drivers, strength-aware
+v0x649f77cf1b10_0 .net "data_in", 0 0, v0x649f77cf2640_0;  1 drivers
+v0x649f77cf1bd0_0 .net "enable", 0 0, v0x649f77cf27a0_0;  1 drivers
+L_0x649f77cf29d0 .reduce/nor v0x649f77cf2640_0;
+L_0x649f77cf2c00 .functor MUXZ 1, o0x7125900660a8, L_0x71258fdb7018, L_0x649f77cf2af0, C4<>;
+S_0x649f77cf1d10 .scope module, "driver2" "OpenDrain_Driver2" 2 12, 3 13 0, S_0x649f77cc8d90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "enable";
+    .port_info 1 /INPUT 1 "data_in";
+    .port_info 2 /OUTPUT 1 "bus_wire";
+L_0x649f77cf2de0 .functor AND 1, v0x649f77cf2870_0, L_0x649f77cf2cf0, C4<1>, C4<1>;
+v0x649f77cf1f40_0 .net *"_ivl_1", 0 0, L_0x649f77cf2cf0;  1 drivers
+v0x649f77cf2020_0 .net *"_ivl_3", 0 0, L_0x649f77cf2de0;  1 drivers
+L_0x71258fdb7060 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x649f77cf20e0_0 .net/2u *"_ivl_4", 0 0, L_0x71258fdb7060;  1 drivers
+o0x712590066288 .functor BUFZ 1, C4<z>; HiZ drive
+; Elide local net with no drivers, v0x649f77cf21a0_0 name=_ivl_6
+v0x649f77cf2280_0 .net8 "bus_wire", 0 0, RS_0x7125900660d8;  alias, 3 drivers, strength-aware
+v0x649f77cf2370_0 .net "data_in", 0 0, v0x649f77cf2700_0;  1 drivers
+v0x649f77cf2410_0 .net "enable", 0 0, v0x649f77cf2870_0;  1 drivers
+L_0x649f77cf2cf0 .reduce/nor v0x649f77cf2700_0;
+L_0x649f77cf2ef0 .functor MUXZ 1, o0x712590066288, L_0x71258fdb7060, L_0x649f77cf2de0, C4<>;
+    .scope S_0x649f77cc8d90;
+T_0 ;
+    %vpi_call 2 19 "$dumpfile", "open_drain_bus_wave.vcd" {0 0 0};
+    %vpi_call 2 20 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x649f77cc8d90 {0 0 0};
+    %vpi_call 2 22 "$monitor", "DataIN-1 = %b | Enable-1 = %b | DataIN-2 = %b | Enable-2 = %b | BusSignal = %b", v0x649f77cf2640_0, v0x649f77cf27a0_0, v0x649f77cf2700_0, v0x649f77cf2870_0, v0x649f77cf2550_0 {0 0 0};
+    %vpi_call 2 25 "$display", "Case 1 - All drivers are disabled, bus should be 1" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x649f77cf2640_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x649f77cf27a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x649f77cf2700_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x649f77cf2870_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 32 "$display", "Case 2 - Driver 1 enabled & drives 0, bus should be 0" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x649f77cf2640_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x649f77cf27a0_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 37 "$display", "Case 3 - Driver 1 enabled & drives 1, releases bus,bus should be 1" {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x649f77cf27a0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x649f77cf2640_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 42 "$display", "Case 4 - Driver 2 enabled & drives 0, bus should be 0" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x649f77cf27a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x649f77cf2700_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x649f77cf2870_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 48 "$display", "Case 5 - Both Drivers enabled & drives 0, bus should be 0" {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x649f77cf27a0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x649f77cf2640_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 53 "$display", "Case 6 - Driver1 drives 0, Driver2 drives 1, bus should be 0" {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x649f77cf2700_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 57 "$display", "Case 7 - Driver1 drives 1, Driver2 drives 0, bus should be 0" {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x649f77cf2700_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x649f77cf2640_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 62 "$display", "Case 8 - All drivers enabled, drives 1, releases bus,bus should be 1" {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x649f77cf2700_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 66 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "open_drain_bus_tb.v";
+    "open_drain_bus.v";
