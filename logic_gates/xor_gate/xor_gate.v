@@ -1,8 +1,10 @@
 module xorgate (
-    a,b,y
+    a,
+    b,
+    y
 );
     output y;
-    input a,b;
+    input a, b;
 
     assign y = a ^ b;
 

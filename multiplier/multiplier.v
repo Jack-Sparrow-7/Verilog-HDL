@@ -1,5 +1,7 @@
 module multiplier (
-    a,b,y
+    a,
+    b,
+    y
 );
 
     input [7:0] a;
@@ -7,5 +9,5 @@ module multiplier (
     output [15:0] y;
 
     assign y = a * b;
-    
+
 endmodule

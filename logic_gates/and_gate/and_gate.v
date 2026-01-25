@@ -1,7 +1,9 @@
 module and_gate (
-    a,b,y
+    a,
+    b,
+    y
 );
-    input wire a,b;
+    input wire a, b;
     output reg y;
 
     always @(*) begin

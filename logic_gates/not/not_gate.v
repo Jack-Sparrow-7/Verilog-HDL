@@ -1,6 +1,9 @@
-module not_gate(a,y);
+module not_gate (
+    a,
+    y
+);
     input a;
     output y;
 
-    not(y,a);
+    not (y, a);
 endmodule

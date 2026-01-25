@@ -1,6 +1,11 @@
-module toggle(t,clk,q,qbar);
+module toggle (
+    t,
+    clk,
+    q,
+    qbar
+);
 
-    input t,clk;
+    input t, clk;
     output reg q;
     output qbar;
 
@@ -8,8 +13,7 @@ module toggle(t,clk,q,qbar);
     assign qbar = ~q;
 
     always @(posedge clk) begin
-        if(t)
-            q <= ~q;
+        if (t) q <= ~q;
     end
 
 endmodule

@@ -1,7 +1,10 @@
 module d_flip_flop (
-    d,clk,q,qbar
+    d,
+    clk,
+    q,
+    qbar
 );
-    input d,clk;
+    input d, clk;
     output reg q;
     output qbar;
 

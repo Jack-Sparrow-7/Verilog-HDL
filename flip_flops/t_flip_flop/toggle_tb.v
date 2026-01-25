@@ -1,9 +1,14 @@
 module toggle_tb;
 
-    reg t,clk;
-    wire q,qbar;
+    reg t, clk;
+    wire q, qbar;
 
-    toggle dut(.t(t),.clk(clk),.q(q),.qbar(qbar));
+    toggle dut (
+        .t(t),
+        .clk(clk),
+        .q(q),
+        .qbar(qbar)
+    );
 
     initial begin
         clk = 0;
@@ -11,14 +16,16 @@ module toggle_tb;
     end
 
     initial begin
-      
-      $dumpfile("toggle_wave.vcd");
-      $dumpvars(0,toggle_tb);
 
-      t = 0; #10;
-      t = 1; #10;
+        $dumpfile("toggle_wave.vcd");
+        $dumpvars(0, toggle_tb);
 
-      $finish;
+        t = 0;
+        #10;
+        t = 1;
+        #10;
+
+        $finish;
 
     end
 

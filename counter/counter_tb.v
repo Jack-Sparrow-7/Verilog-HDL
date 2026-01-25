@@ -1,19 +1,25 @@
 module counter_tb;
 
-    reg clk,enable,reset;
+    reg clk, enable, reset;
     wire [0:7] count;
 
-    counter uut(.clk(clk),.enable(enable),.reset(reset),.count(count));
+    counter uut (
+        .clk(clk),
+        .enable(enable),
+        .reset(reset),
+        .count(count)
+    );
 
     initial clk = 0;
     always #5 clk = ~clk;
 
     initial begin
         $dumpfile("counter_wave.vcd");
-        $dumpvars(0,counter_tb);
+        $dumpvars(0, counter_tb);
 
-        reset = 1; enable = 0;
-        
+        reset  = 1;
+        enable = 0;
+
         #10 reset = 0;
         #10 enable = 1;
 

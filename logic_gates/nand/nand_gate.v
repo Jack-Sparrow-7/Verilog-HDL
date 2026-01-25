@@ -1,10 +1,12 @@
-module nand_gate(
-    a,b,y
+module nand_gate (
+    a,
+    b,
+    y
 );
 
-input a,b;
-output y;
+    input a, b;
+    output y;
 
-nand(y,a,b);
-    
+    nand (y, a, b);
+
 endmodule
