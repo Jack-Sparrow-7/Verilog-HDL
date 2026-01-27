@@ -1,10 +1,12 @@
 module param_subtractor_tb;
+
+    localparam SIZE = 2;
     reg [1:0] a, b;
     wire [1:0] diff;
     wire borrow;
 
     param_subtractor #(
-        .SIZE(2)
+        .SIZE(SIZE)
     ) uut (
         a,
         b,
