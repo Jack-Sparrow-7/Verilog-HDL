@@ -1,20 +1,22 @@
 module param_adder_tb;
     reg [1:0] a, b;
     wire [1:0] sum;
+    wire carry;
 
     param_adder #(
         .SIZE(2)
     ) uut (
         a,
         b,
-        sum
+        sum,
+        carry
     );
 
     initial begin
         $dumpfile("param_adder_wave.vcd");
         $dumpvars(0, param_adder_tb);
 
-        $monitor("a = %b | b = %b | sum = %b", a, b, sum);
+        $monitor("a = %b | b = %b | carry = %b | sum = %b ", a, b, carry, sum);
 
         a = 2'b00;
         b = 2'b00;

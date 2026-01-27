@@ -3,10 +3,12 @@ module param_adder #(
 ) (
     a,
     b,
-    sum
+    sum,
+    carry
 );
     input [SIZE - 1:0] a, b;
     output [SIZE - 1:0] sum;
+    output carry;
 
-    assign sum = a + b;
+    assign {carry, sum} = a + b;
 endmodule

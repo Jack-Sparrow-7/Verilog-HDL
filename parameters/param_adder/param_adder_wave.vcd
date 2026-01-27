@@ -1,5 +1,5 @@
 $date
-	Tue Jan 27 19:53:49 2026
+	Tue Jan 27 20:00:36 2026
 $end
 $version
 	Icarus Verilog
@@ -9,59 +9,61 @@ $timescale
 $end
 $scope module param_adder_tb $end
 $var wire 2 ! sum [1:0] $end
-$var reg 2 " a [1:0] $end
-$var reg 2 # b [1:0] $end
+$var wire 1 " carry $end
+$var reg 2 # a [1:0] $end
+$var reg 2 $ b [1:0] $end
 $scope module uut $end
-$var wire 2 $ a [1:0] $end
-$var wire 2 % b [1:0] $end
-$var wire 2 & sum [1:0] $end
-$var parameter 32 ' SIZE $end
+$var wire 2 % a [1:0] $end
+$var wire 2 & b [1:0] $end
+$var wire 2 ' sum [1:0] $end
+$var wire 1 " carry $end
+$var parameter 32 ( SIZE $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
 $dumpall
-b10 '
+b10 (
 $end
 #0
 $dumpvars
+b0 '
 b0 &
 b0 %
 b0 $
 b0 #
-b0 "
+0"
 b0 !
 $end
 #10
 b1 !
-b1 &
-b1 "
-b1 $
+b1 '
+b1 #
+b1 %
 #20
 b10 !
-b10 &
-b1 #
-b1 %
+b10 '
+b1 $
+b1 &
 #30
 b11 !
-b11 &
-b10 "
-b10 $
+b11 '
+b10 #
+b10 %
 #40
-b0 #
-b0 %
-b11 !
-b11 &
-b11 "
-b11 $
-#50
-b0 !
+b0 $
 b0 &
-b1 #
-b1 %
-#60
-b10 !
-b10 &
 b11 #
 b11 %
+#50
+b0 !
+b0 '
+1"
+b1 $
+b1 &
+#60
+b10 !
+b10 '
+b11 $
+b11 &
 #70
