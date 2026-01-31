@@ -1,0 +1,77 @@
+$date
+	Sat Jan 31 21:02:15 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module arithmetic_tb $end
+$var wire 5 ! sum [4:0] $end
+$var wire 4 " rem [3:0] $end
+$var wire 4 # quot [3:0] $end
+$var wire 8 $ prod [7:0] $end
+$var wire 4 % diff [3:0] $end
+$var reg 4 & a [3:0] $end
+$var reg 4 ' b [3:0] $end
+$scope module uut $end
+$var wire 4 ( a [3:0] $end
+$var wire 4 ) b [3:0] $end
+$var wire 5 * sum [4:0] $end
+$var wire 4 + rem [3:0] $end
+$var wire 4 , quot [3:0] $end
+$var wire 8 - prod [7:0] $end
+$var wire 4 . diff [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b111 .
+b111100 -
+b10 ,
+b10 +
+b10001 *
+b101 )
+b1100 (
+b101 '
+b1100 &
+b111 %
+b111100 $
+b10 #
+b10 "
+b10001 !
+$end
+#10
+b11 '
+b11 )
+b110 !
+b110 *
+b0 %
+b0 .
+b1001 $
+b1001 -
+b1 #
+b1 ,
+b0 "
+b0 +
+b11 &
+b11 (
+#20
+b1 '
+b1 )
+b1 !
+b1 *
+b1111 %
+b1111 .
+b0 $
+b0 -
+b0 #
+b0 ,
+b0 &
+b0 (
+#30
