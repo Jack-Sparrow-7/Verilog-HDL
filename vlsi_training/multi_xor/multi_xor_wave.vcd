@@ -1,0 +1,57 @@
+$date
+	Sat Jan 31 22:17:43 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module multi_xor_tb $end
+$var wire 1 ! y3 $end
+$var wire 1 " y2 $end
+$var wire 1 # y1 $end
+$var reg 1 $ a $end
+$var reg 1 % b $end
+$scope module o1 $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var wire 1 # y $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var reg 1 " y $end
+$upscope $end
+$scope module o3 $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var wire 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#10
+1#
+1"
+1!
+1%
+#20
+0%
+1$
+#30
+0#
+0"
+0!
+1%
+#40
