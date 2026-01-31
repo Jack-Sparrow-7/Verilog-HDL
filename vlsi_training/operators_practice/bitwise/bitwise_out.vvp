@@ -1,0 +1,64 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x647fe80a3b50 .scope module, "bitwise_tb" "bitwise_tb" 2 1;
+ .timescale 0 0;
+v0x647fe80b7760_0 .var "a", 3 0;
+v0x647fe80b7840_0 .var "b", 3 0;
+v0x647fe80b78e0_0 .net "bit_and", 3 0, L_0x647fe808fff0;  1 drivers
+v0x647fe80b79b0_0 .net "bit_not", 3 0, L_0x647fe80b7e80;  1 drivers
+v0x647fe80b7a80_0 .net "bit_or", 3 0, L_0x647fe80902e0;  1 drivers
+v0x647fe80b7b70_0 .net "bit_xor", 3 0, L_0x647fe80b7da0;  1 drivers
+S_0x647fe80a3ce0 .scope module, "uut" "bitwise" 2 5, 3 1 0, S_0x647fe80a3b50;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /INPUT 4 "b";
+    .port_info 2 /OUTPUT 4 "bit_and";
+    .port_info 3 /OUTPUT 4 "bit_not";
+    .port_info 4 /OUTPUT 4 "bit_or";
+    .port_info 5 /OUTPUT 4 "bit_xor";
+L_0x647fe808fff0 .functor AND 4, v0x647fe80b7760_0, v0x647fe80b7840_0, C4<1111>, C4<1111>;
+L_0x647fe80902e0 .functor OR 4, v0x647fe80b7760_0, v0x647fe80b7840_0, C4<0000>, C4<0000>;
+L_0x647fe80b7da0 .functor XOR 4, v0x647fe80b7760_0, v0x647fe80b7840_0, C4<0000>, C4<0000>;
+L_0x647fe80b7e80 .functor NOT 4, v0x647fe80b7760_0, C4<0000>, C4<0000>, C4<0000>;
+v0x647fe8092730_0 .net "a", 3 0, v0x647fe80b7760_0;  1 drivers
+v0x647fe80b7210_0 .net "b", 3 0, v0x647fe80b7840_0;  1 drivers
+v0x647fe80b72f0_0 .net "bit_and", 3 0, L_0x647fe808fff0;  alias, 1 drivers
+v0x647fe80b73b0_0 .net "bit_not", 3 0, L_0x647fe80b7e80;  alias, 1 drivers
+v0x647fe80b7490_0 .net "bit_or", 3 0, L_0x647fe80902e0;  alias, 1 drivers
+v0x647fe80b75c0_0 .net "bit_xor", 3 0, L_0x647fe80b7da0;  alias, 1 drivers
+    .scope S_0x647fe80a3b50;
+T_0 ;
+    %vpi_call 2 15 "$dumpfile", "bitwise_wave.vcd" {0 0 0};
+    %vpi_call 2 16 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x647fe80a3b50 {0 0 0};
+    %vpi_call 2 18 "$monitor", "a = %b or %d | b = %b or %d | bit_and = %b or %d | bit_not = %b or %d | bit_or = %b or %d | bit_xor = %b or %d", v0x647fe80b7760_0, v0x647fe80b7760_0, v0x647fe80b7840_0, v0x647fe80b7840_0, v0x647fe80b78e0_0, v0x647fe80b78e0_0, v0x647fe80b79b0_0, v0x647fe80b79b0_0, v0x647fe80b7a80_0, v0x647fe80b7a80_0, v0x647fe80b7b70_0, v0x647fe80b7b70_0 {0 0 0};
+    %pushi/vec4 12, 0, 4;
+    %store/vec4 v0x647fe80b7760_0, 0, 4;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x647fe80b7840_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x647fe80b7760_0, 0, 4;
+    %pushi/vec4 3, 0, 4;
+    %store/vec4 v0x647fe80b7840_0, 0, 4;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x647fe80b7760_0, 0, 4;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x647fe80b7840_0, 0, 4;
+    %delay 10, 0;
+    %vpi_call 2 35 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "bitwise_tb.v";
+    "bitwise.v";

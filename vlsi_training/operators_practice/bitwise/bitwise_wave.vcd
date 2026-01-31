@@ -1,0 +1,71 @@
+$date
+	Sat Jan 31 21:20:50 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module bitwise_tb $end
+$var wire 4 ! bit_xor [3:0] $end
+$var wire 4 " bit_or [3:0] $end
+$var wire 4 # bit_not [3:0] $end
+$var wire 4 $ bit_and [3:0] $end
+$var reg 4 % a [3:0] $end
+$var reg 4 & b [3:0] $end
+$scope module uut $end
+$var wire 4 ' a [3:0] $end
+$var wire 4 ( b [3:0] $end
+$var wire 4 ) bit_and [3:0] $end
+$var wire 4 * bit_not [3:0] $end
+$var wire 4 + bit_or [3:0] $end
+$var wire 4 , bit_xor [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1001 ,
+b1101 +
+b11 *
+b100 )
+b101 (
+b1100 '
+b101 &
+b1100 %
+b100 $
+b11 #
+b1101 "
+b1001 !
+$end
+#10
+b11 $
+b11 )
+b11 "
+b11 +
+b0 !
+b0 ,
+b1100 #
+b1100 *
+b11 &
+b11 (
+b11 %
+b11 '
+#20
+b0 $
+b0 )
+b1 "
+b1 +
+b1 !
+b1 ,
+b1111 #
+b1111 *
+b1 &
+b1 (
+b0 %
+b0 '
+#30
