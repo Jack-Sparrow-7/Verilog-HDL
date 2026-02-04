@@ -1,0 +1,6 @@
+VCD info: dumpfile multi_nand_wave.vcd opened for output.
+a = 0 | b = 0 | GateOut = 1 | BehaviourOut = 1 | DataFlowOut = 1
+a = 0 | b = 1 | GateOut = 1 | BehaviourOut = 1 | DataFlowOut = 1
+a = 1 | b = 0 | GateOut = 1 | BehaviourOut = 1 | DataFlowOut = 1
+a = 1 | b = 1 | GateOut = 0 | BehaviourOut = 0 | DataFlowOut = 0
+multi_nand_tb.v:47: $finish called at 40 (1s)
