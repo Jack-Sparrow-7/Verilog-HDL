@@ -1,0 +1,10 @@
+mode = 00 | sensor_a = 0101 | sensor_b = 0000 | alarm_leds = 001 | pwr_reg = 0011
+mode = 01 | sensor_a = 1000 | sensor_b = 0100 | alarm_leds = 001 | pwr_reg = 1001
+mode = 10 | sensor_a = 1011 | sensor_b = 1000 | alarm_leds = 001 | pwr_reg = 0010
+mode = 11 | sensor_a = 1110 | sensor_b = 1100 | alarm_leds = 100 | pwr_reg = 0001
+alarm_leds = 100
+alarm_leds = 100
+alarm_leds = 100
+alarm_leds = 100
+alarm_leds = 100
+alarm_monitor_tb.v:80: $finish called at 370 (1s)
