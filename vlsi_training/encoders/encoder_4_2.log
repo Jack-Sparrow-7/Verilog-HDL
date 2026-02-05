@@ -1,0 +1,5 @@
+a = 0 | b = 0 | c = 0 | d = 1 | y = 00
+a = 0 | b = 0 | c = 1 | d = 0 | y = 01
+a = 0 | b = 1 | c = 0 | d = 0 | y = 10
+a = 1 | b = 0 | c = 0 | d = 0 | y = 11
+encoder_4_2_tb.v:40: $finish called at 40 (1s)
