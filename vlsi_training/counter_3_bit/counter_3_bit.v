@@ -12,7 +12,7 @@ module counter_3_bit (
 
     always @(posedge clk) begin
         if (reset) count = 3'b000;
-        else count = count + 1;
+        else count += 1;
     end
 
 endmodule

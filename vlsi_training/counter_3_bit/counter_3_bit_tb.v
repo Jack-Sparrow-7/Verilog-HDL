@@ -23,14 +23,14 @@ module counter_3_bit_tb;
 
         reset = 0;
 
-        #170;
+        #180;
 
         reset = 1;
         #10;
 
         reset = 0;
 
-        #100;
+        #20;
 
         $finish;
     end
