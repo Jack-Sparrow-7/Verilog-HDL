@@ -1,0 +1,8 @@
+Time  State  R Y G
+VCD info: dumpfile dump.vcd opened for output.
+   0   00     1 0 0
+  10   01     0 1 0
+  20   10     0 0 1
+  30   11     0 0 0
+  40   01     0 1 0
+traffic_controller_tb.v:19: $finish called at 50 (1s)

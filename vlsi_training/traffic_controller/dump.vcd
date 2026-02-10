@@ -1,0 +1,52 @@
+$date
+	Tue Feb 10 10:59:23 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module traffic_controller_tb $end
+$var wire 1 ! yellow $end
+$var wire 1 " red $end
+$var wire 1 # green $end
+$var reg 2 $ state [1:0] $end
+$scope module DUT $end
+$var wire 2 % state [1:0] $end
+$var reg 1 # green $end
+$var reg 1 " red $end
+$var reg 1 ! yellow $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 %
+b0 $
+0#
+1"
+0!
+$end
+#10
+1!
+0"
+b1 $
+b1 %
+#20
+1#
+0!
+b10 $
+b10 %
+#30
+0#
+b11 $
+b11 %
+#40
+1!
+b1 $
+b1 %
+#50
