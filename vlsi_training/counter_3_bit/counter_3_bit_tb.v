@@ -8,15 +8,13 @@ module counter_3_bit_tb;
         count
     );
 
-    initial begin
-        clk = 0;
-    end
-
     always #5 clk = ~clk;
 
     initial begin
         $monitor("clk = %b | reset = %b | count = %b or %d", clk, reset, count,
                  count);
+        clk   = 0;
+
 
         reset = 1;
         #10;
