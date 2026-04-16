@@ -1,0 +1,77 @@
+$date
+	Thu Apr 16 21:01:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 1 ! out $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$var reg 1 $ trigger $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # reset $end
+$var wire 1 $ trigger $end
+$var parameter 2 % IDLE $end
+$var parameter 2 & S1 $end
+$var parameter 2 ' S2 $end
+$var reg 2 ( current_state [1:0] $end
+$var reg 2 ) next_state [1:0] $end
+$var reg 1 ! out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10 '
+b1 &
+b0 %
+$end
+#0
+$dumpvars
+b0 )
+b0 (
+0$
+1#
+0"
+0!
+$end
+#5
+1"
+#10
+0"
+0#
+#15
+1"
+#20
+b1 )
+0"
+1$
+#25
+b10 )
+b1 (
+1"
+#30
+0"
+0$
+#35
+1!
+b0 )
+b10 (
+1"
+#40
+0"
+#45
+0!
+b0 (
+1"
+#50
+0"
+#55
+1"
+#60
+0"
