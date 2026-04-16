@@ -1,0 +1,7 @@
+VCD info: dumpfile wave.vcd opened for output.
+Time: 0 | State: 00 | Output: 0
+Time: 25 | State: 01 | Output: 1
+Time: 30 | State: 01 | Output: 0
+Time: 35 | State: 10 | Output: 0
+Time: 45 | State: 00 | Output: 0
+testbench.v:36: $finish called at 60 (1s)
