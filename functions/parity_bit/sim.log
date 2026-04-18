@@ -1,0 +1,2 @@
+data_in = 10101010 | parity_out = 0
+data_in = 10101011 | parity_out = 1
