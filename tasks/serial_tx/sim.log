@@ -1,0 +1,21 @@
+Starting serial transmission...
+Time = 0 | clk = 0 | serial_out = 0
+Time = 5 | clk = 1 | serial_out = 1
+Time = 10 | clk = 0 | serial_out = 1
+Time = 15 | clk = 1 | serial_out = 0
+Time = 20 | clk = 0 | serial_out = 0
+Time = 25 | clk = 1 | serial_out = 1
+Time = 30 | clk = 0 | serial_out = 1
+Time = 35 | clk = 1 | serial_out = 0
+Time = 40 | clk = 0 | serial_out = 0
+Time = 45 | clk = 1 | serial_out = 1
+Time = 50 | clk = 0 | serial_out = 1
+Time = 55 | clk = 1 | serial_out = 0
+Time = 60 | clk = 0 | serial_out = 0
+Time = 65 | clk = 1 | serial_out = 1
+Time = 70 | clk = 0 | serial_out = 1
+Serial transmission complete.
+Time = 75 | clk = 1 | serial_out = 1
+Time = 80 | clk = 0 | serial_out = 1
+design.v:26: $finish called at 85 (1s)
+Time = 85 | clk = 1 | serial_out = 1
